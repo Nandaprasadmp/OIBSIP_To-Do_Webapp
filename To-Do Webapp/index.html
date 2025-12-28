@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANDA PRASAD | Cobalt OS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="blue-glow-overlay"></div>
+    
+    <div class="app-frame">
+        <aside class="control-rail">
+            <div class="identity">
+                <div class="blue-seal">NP</div>
+                <h2 class="name">NANDA PRASAD</h2>
+                <p class="role">STRATEGIC LEAD</p>
+            </div>
+
+            <div class="facilities">
+                <div class="fac-card">
+                    <small>EFFICIENCY ENGINE</small>
+                    <div class="progress-container">
+                        <div id="momentumFill" class="fill"></div>
+                    </div>
+                    <span id="percText">0% PERFORMANCE</span>
+                </div>
+                
+                <div class="fac-card quote-box">
+                    <p id="dynamicQuote">"Initializing Cobalt Protocol..."</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="workspace">
+            <header class="header">
+                <div class="time-box">
+                    <h1 id="clock">00:00:00</h1>
+                    <p id="date">TUESDAY, DEC 23</p>
+                </div>
+                <div class="sys-status">
+                    <span class="status-indicator"></span> MISSION CONTROL ACTIVE
+                </div>
+            </header>
+
+            <section class="action-bar">
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="Enter high-level objective..." onkeypress="handleEnter(event)">
+                    <div class="meta-controls">
+                        <select id="priority">
+                            <option value="high">CRITICAL</option>
+                            <option value="med">STEADY</option>
+                            <option value="low">ROUTINE</option>
+                        </select>
+                        <button onclick="addTask()" class="btn-blue">DEPLOY</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="task-grid">
+                <div class="grid-col">
+                    <div class="col-header">
+                        <h3>ACTIVE OPERATIONS</h3>
+                        <span id="pCount" class="badge">0</span>
+                    </div>
+                    <ul id="pendingList" class="task-ul"></ul>
+                </div>
+                <div class="grid-col">
+                    <div class="col-header">
+                        <h3>COMPLETED MISSIONS</h3>
+                    </div>
+                    <ul id="completedList" class="task-ul"></ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
